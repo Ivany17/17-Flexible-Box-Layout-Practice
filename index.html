@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(17) Flexible Box Layout. Practice</title>
+    <link rel="shortcut icon" href="./assets/images/nature-logo.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- parent
+    -----------------------------------------------------
+    включает флексбокс
+        display: flex;
+    изменяет направление основной оси
+        flex-direction: row, row-reverse, column, column-reverse
+    выравнивание вдоль основной оси
+        justify-content: flex-start, flex-end, center, space-around, space-between, space-evenly
+    выравнивание вдоль поперечной оси
+        align-items: flex-start, flex-end, center, stretch 
+    перенос элементов на следующую строку
+        flex-wrap: wrap, wrap-reverse, nowrap
+    выравнивание строк вдоль поперечной оси
+        align-content: flex-start, flex-end, center, space-around, space-between, space-evenly
+    
+        flex-flow: <flex-direction> <flex-wrap>
+        
+    child
+    ----------------------------------------------------- 
+    определение порядка расположения элемента вдоль главной оси
+        order: <+/-number> default=0;
+    выравнивание вдоль поперечной оси для ДОЧЕРНИХ элементов
+        align-self: flex-start, flex-end, center, stretch 
+    
+    margin дочерних флексов не схлопываются -->
+        
+    <!-- приоритетность ширины
+    content => width/height => flex-basis => max-width/max-height => min-width/min-height -->
+    <div class="wrapper">
+        <header class="header">
+            <!-- .logo{logo}+nav>ul.list>li.list-item*5>a.link{item $} -->
+            <div class="logo">logo</div>
+            <nav>
+                <ul class="list">
+                    <li class="list-item"><a href="" class="link">item 1</a></li>
+                    <li class="list-item"><a href="" class="link">item 2</a></li>
+                    <li class="list-item"><a href="" class="link">item 3</a></li>
+                    <li class="list-item"><a href="" class="link">item 4</a></li>
+                    <li class="list-item"><a href="" class="link">item 5</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <!-- section.main-section>h1.main-heading{Main heading}+article.main-article*8>(h2.heading{Heading}+p>lorem50) -->
+            <section class="main-section">
+                <h1 class="main-heading">Main heading</h1>
+                <article class="main-article">
+                    <h2 class="heading">Heading</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit distinctio omnis rem qui. Pariatur aliquid voluptates atque possimus cupiditate, dolorum aut quam eum quaerat totam ab ut? Ullam, quibusdam nam. Unde obcaecati facere, dolore atque esse beatae distinctio et sequi provident recusandae rerum fugit soluta tempore. Minima, mollitia. Corporis, fugiat.</p>
+                </article>
+                <article class="main-article">
+                    <h2 class="heading">Heading</h2>
+                    <p>Quos optio cupiditate aliquam numquam, suscipit recusandae, vitae voluptatum ex error animi facilis nulla neque quod. Neque laborum soluta quidem omnis veritatis magni quis porro dolore placeat tempora, nostrum aspernatur et corporis repellat laboriosam sunt quo sit, quas voluptatem itaque tenetur commodi. Omnis, sequi numquam provident incidunt sint ipsam corporis!</p>
+                </article>
+                <article class="main-article">
+                    <h2 class="heading">Heading</h2>
+                    <p>Expedita voluptas, doloribus laboriosam ex veritatis ullam animi saepe quidem quod. Ratione consectetur vel labore! Culpa amet voluptatum modi blanditiis, molestiae optio, delectus veritatis eveniet, dignissimos possimus nobis sunt. Commodi omnis amet aliquam sapiente, eum tempora esse magnam dolorum quae voluptate provident odio numquam? Alias hic qui libero eum voluptate.</p>
+                </article>
+                <article class="main-article">
+                    <h2 class="heading">Heading</h2>
+                    <p>Asperiores dolore suscipit vero distinctio quia sit odit nobis repudiandae culpa placeat quae rerum ducimus eum fugiat autem dolor, earum dicta unde quaerat accusantium similique velit nisi iste expedita! Obcaecati hic distinctio assumenda error, explicabo maiores exercitationem aliquam numquam? Atque, aspernatur architecto? Dicta nemo accusantium magni sapiente corrupti explicabo eum!</p>
+                </article>
+                <article class="main-article">
+                    <h2 class="heading">Heading</h2>
+                    <p>Est inventore quasi ut, vel sapiente minus ullam odit. Sit saepe ipsum, odio a ut placeat iure praesentium cupiditate dicta ipsam nihil nostrum perferendis dignissimos quibusdam in quis tempora itaque? Aperiam officiis delectus non optio reprehenderit libero, quod fugit doloribus veniam tempore, iste repellendus eligendi laborum ex enim molestiae sequi!</p>
+                </article>
+                <article class="main-article">
+                    <h2 class="heading">Heading</h2>
+                    <p>Dolore veniam aliquid consequatur sapiente vitae ut perferendis repellendus fuga nulla facilis inventore assumenda eaque perspiciatis quibusdam similique porro nihil, nobis cumque at ullam. Ab praesentium, animi possimus quis aliquam commodi consectetur vero, quod hic, provident reprehenderit sint fugit accusamus magni laudantium. Placeat minus commodi corporis nulla quos animi eveniet.</p>
+                </article>
+                <article class="main-article">
+                    <h2 class="heading">Heading</h2>
+                    <p>Eaque fuga, autem necessitatibus quasi recusandae cumque blanditiis fugiat excepturi nobis, ducimus magni earum distinctio enim qui fugit minus, facere sint natus eveniet tempore expedita saepe voluptas praesentium ipsam. Incidunt, tempora non, officia facilis, ea sed similique nemo tenetur iste quibusdam esse expedita quidem unde aliquam quas quod iusto temporibus!</p>
+                </article>
+                <article class="main-article">
+                    <h2 class="heading">Heading</h2>
+                    <p>Cum quisquam, nihil nostrum veniam saepe laudantium? Corrupti, facere eveniet? Optio accusamus aut porro sunt fugit alias sed voluptatum nihil, commodi voluptates a, sint omnis facere laudantium fugiat ut sapiente eos culpa, deserunt asperiores? Minus, ex, nesciunt nam obcaecati natus at debitis cupiditate facilis necessitatibus ipsum laudantium ducimus doloremque odit?</p>
+                </article>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2023</p>
+        </footer>
+    </div>    
+</body>
+</html>
